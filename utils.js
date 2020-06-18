@@ -84,7 +84,12 @@ const parseRelatedProducts = (data) => {
 }
 
 const parseCategories = (data) => {
-  return data.value
+  const categoriesArray = [];
+  data.value.forEach((value) => {
+    console.log(value['link']['document'])
+    // categoriesArray.push(value.link.value.document.slug);
+  })
+  return categoriesArray;
 }
 
 const parseNumber = (data) => {
