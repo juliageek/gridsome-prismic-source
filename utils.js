@@ -85,10 +85,13 @@ const parseRelatedProducts = (data) => {
 
 const parseCategories = (data) => {
   const categoriesArray = [];
-  data.value.forEach((value) => {
-    console.log(value['link']['document'])
-    // categoriesArray.push(value.link.value.document.slug);
-  })
+  if (data && data.value && data.value.length) {
+      data.value.forEach((value) => {
+        if (value.link) {
+          categoriesArray.push(value.link.value.document.slug);
+        }
+      })
+  }
   return categoriesArray;
 }
 
