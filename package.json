@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "lodash.clonedeep": "^4.5.0",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "prismic-dom": "^2.2.3",
     "prismic-javascript": "^3.0.0"
   }
